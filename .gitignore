@@ -1,0 +1,7 @@
+bin/
+obj/
+node_modules/
+server/wwwroot/
+server/connection.local.json
+server/userdata.db*
+server/keys/
