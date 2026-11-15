@@ -1,0 +1,29 @@
+appId: com.jsonprocedure.app
+productName: JsonProcedure
+copyright: JsonProcedure
+
+directories:
+  output: release
+  buildResources: build
+
+# Only the compiled app and its production dependencies (mssql) go into the package.
+files:
+  - out/**/*
+  - package.json
+asar: true
+npmRebuild: false   # no native Node modules: SQLite is Node's built-in node:sqlite, SQL Server is pure-JS tedious
+
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: ${productName}-Setup-${version}.${ext}
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: JsonProcedure
+  deleteAppDataOnUninstall: false   # keep saved connections/history if the app is uninstalled

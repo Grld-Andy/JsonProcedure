@@ -1,6 +1,0 @@
-{
-  "name": "JsonProcedure",
-  "description": "SQL Server database administration tool for connecting to databases, creating tables, importing/exporting JSON data, and saving and executing stored procedures.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

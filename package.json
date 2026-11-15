@@ -1,0 +1,43 @@
+{
+  "name": "jsonprocedure",
+  "productName": "JsonProcedure",
+  "description": "SQL Server stored procedures & JSON database console",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.js",
+  "author": "JsonProcedure",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc -p tsconfig.node.json --composite false && tsc -p tsconfig.web.json --composite false",
+    "test:backend": "electron-vite build && node scripts/smoke-backend.mjs",
+    "pack": "electron-vite build && electron-builder --dir",
+    "dist": "electron-vite build && electron-builder --win"
+  },
+  "dependencies": {
+    "mssql": "^12.7.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/mssql": "^9.1.7",
+    "@types/node": "^24.9.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "devicon": "^2.18.0",
+    "driver.js": "^1.12.1",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "simple-icons": "^16.37.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

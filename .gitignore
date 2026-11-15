@@ -1,6 +1,15 @@
-bin/
-obj/
 node_modules/
+out/
+dist/
+release/
+*.log
+.env*
+!.env.example
+.DS_Store
+
+# legacy C# backend build output / local data
+server/bin/
+server/obj/
 server/wwwroot/
 server/connection.local.json
 server/userdata.db*
